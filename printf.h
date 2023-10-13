@@ -4,21 +4,22 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _pchar(valist c);
-int _pstring(valist s);
+int _pchar(va_list c);
+int _pstring(va_list s);
 
 /**
  * struct format - structure of type format with two elements
- * @src: placeholder
- * @dis: function to process it
+ * @id: placeholder
+ * @f: function to process it
  */
 typedef struct format
 {
-	char *src;
-	int (*dis)(va_list);
-} form;
+	char *id;
+	int (*f)(va_list);
+} convert_match;
 
 #endif

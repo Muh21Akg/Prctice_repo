@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#includ3 <stdlib.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -14,7 +15,7 @@ int _pstring(valist s);
  * @src: placeholder
  * @dis: function to process it
  */
-typedefvstruct format
+typedef struct format
 {
 	char *src;
 	int (*dis)(va_list);

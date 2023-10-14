@@ -17,10 +17,10 @@ int _printf(const char *format, ...)
 	i = len = 0;
 	va_start(arg, format);
 loop:
-	while (format[i] && format)
+	for (; format[i] && format; i++)
 		{
 		funs = 0;
-		while (funs < 2)
+		for (; funs < 2; funs++)
 		{
 			if (format[i] == '%')
 			{
@@ -31,11 +31,9 @@ loop:
 					goto loop;
 				}
 			}
-			funs++;
 		}
 		_putchar(format[i]);
 		len++;
-		i++;
 	}
 	va_end(arg);
 	return (len);

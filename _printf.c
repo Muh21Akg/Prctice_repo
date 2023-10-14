@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	f_func fun[] = {
 		{"c", _pchar},
 		{"s", _pstring},
+		{"r",_preverse},
 	};
 	int i, funs, len;
 	va_list arg;
@@ -20,15 +21,21 @@ loop:
 	for (; format[i] && format; i++)
 		{
 		funs = 0;
-		for (; funs < 2; funs++)
+		for (; funs < 4; funs++)
 		{
 			if (format[i] == '%')
 			{
 				if (fun[funs].src[0] == format[i + 1])
-					{
+				{
 					len += fun[funs].des(arg);
 					i += 2;
 					goto loop;
+				}
+				else if (format[i + 1] == '%')
+				{
+					_putchar('%');
+					len++;
+					i += 2;
 				}
 			}
 		}

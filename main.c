@@ -11,10 +11,11 @@ int main(void)
 	char cc = 's';
 	char *s = "ss";
 	char *ss = NULL;
+	char *st = "esrever";
 
-	_printf("he%cllo, w%sorld%cWASSUP%s", c, s, cc, ss);
+	_printf("he%cllo%%, w%sorld%cWAS%sSUP%s", c, s, cc, st, ss);
 	printf("\n");
-	printf("he%cllo, w%sorld%cWASSUP%s", c, s, cc, ss);
+	printf("he%cllo%%, w%sorld%cWAS%sSUP%s", c, s, cc, st, ss);
 	printf("\n");
 	return (0);
 }

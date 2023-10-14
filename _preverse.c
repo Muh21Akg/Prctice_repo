@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strlen - cqlculates length of string
+ * _strlenv - cqlculates length of string
  * @s: string
  * Return: length
  */
-int _strlen(char *s)
+int _strlenv(char *s)
 {
 	int c;
 
@@ -19,7 +19,7 @@ int _strlen(char *s)
  * @arg: string
  * Return: string length
  */
-int _pstring(va_list arg)
+int _preverse(va_list arg)
 {
 	char *s;
 	int i, len;
@@ -27,8 +27,8 @@ int _pstring(va_list arg)
 	s = va_arg(arg, char *);
 	if (s == NULL)
 		s = "(null)";
-	len = _strlen(s);
-	for (i = 0; i < len; i++)
+	len = _strlenv(s);
+	for (i = len; i <= 0; i++)
 		_putchar(s[i]);
 	return (len);
 }

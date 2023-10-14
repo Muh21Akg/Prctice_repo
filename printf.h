@@ -12,14 +12,14 @@ int _pchar(va_list c);
 int _pstring(va_list s);
 
 /**
- * struct format - structure of type format with two elements
- * @id: placeholder
- * @f: function to process it
+ * struct format_functions - structure of type format with two elements
+ * @src: placeholder
+ * @des: function to process it
  */
-typedef struct format
+typedef struct format_functions
 {
-	char *id;
-	int (*f)(va_list);
-} convert_match;
+	char *src;
+	int (*des)(va_list);
+} f_func;
 
 #endif

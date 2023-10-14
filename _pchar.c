@@ -7,9 +7,6 @@
  */
 int _pchar(va_list val)
 {
-	char s;
-
-	s = va_arg(val, int);
-	_putchar(s);
+	_putchar(va_arg(val, int));
 	return (1);
 }

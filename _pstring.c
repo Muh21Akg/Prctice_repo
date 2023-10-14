@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "main.h"
 
 /**
  * _strlen - cqlculates length of string

@@ -23,7 +23,7 @@ loop:
 	for (; format[i] && format; i++)
 		{
 		funs = 0;
-		for (; funs < 4; funs++)
+		for (; funs < 5; funs++)
 		{
 			if (format[i] == '%')
 			{

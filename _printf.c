@@ -8,6 +8,7 @@
 int _printf(const char *format, ...)
 {
 	f_func fun[] = {
+		{"d", _pint},
 		{"c", _pchar},
 		{"s", _pstring},
 		{"r", _preverse},

@@ -12,6 +12,7 @@ int _pchar(va_list);
 int _pstring(va_list);
 int _preverse(va_list);
 int _pinteger(va_list);
+int _pint(va_list i);
 /**
  * struct format_functions - structure of type format with two elements
  * @src: placeholder

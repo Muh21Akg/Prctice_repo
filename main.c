@@ -21,5 +21,4 @@ int main(void)
 	printf("\n");
 	printf("ours: %d\nlib: %d\n", i, j);
 	return (0);
-	_printf("len1 = %d\nlen2 = %d", i, j);
 }

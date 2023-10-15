@@ -15,7 +15,7 @@ int _strlenv(char *s)
 }
 
 /**
- * _pstring - prints a string
+ * _preverse - prints a string
  * @arg: string
  * Return: string length
  */

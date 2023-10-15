@@ -11,7 +11,7 @@ int _printf(const char *format, ...);
 int _pchar(va_list);
 int _pstring(va_list);
 int _preverse(va_list);
-
+int _pinteger(va_list);
 /**
  * struct format_functions - structure of type format with two elements
  * @src: placeholder

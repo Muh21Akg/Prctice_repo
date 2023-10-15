@@ -10,7 +10,8 @@ int _printf(const char *format, ...)
 	f_func fun[] = {
 		{"c", _pchar},
 		{"s", _pstring},
-		{"r",_preverse},
+		{"r", _preverse},
+		{"i", _pinteger}
 	};
 	int i, funs, len;
 	va_list arg;

@@ -12,12 +12,13 @@ int main(void)
 	char *s = "ss";
 	char *ss = NULL;
 	char *st = "abcde";
+	int x = 8848;
 	int i, j;
 
-	i = _printf("he%cllo%%, w%sorld%cWAS%sSUP%s\n", c, s, cc, st, ss);
+	i = _printf("%ihe%cllo%%, w%sorld%cWAS%sSUP%s\n", x, c, s, cc, st, ss);
 	printf("\n");
-	j = printf("he%cllo%%, w%sorld%cWAS%sSUP%s\n", c, s, cc, st, ss);
+	j = printf("%ihe%cllo%%, w%sorld%cWAS%sSUP%s\n", x, c, s, cc, st, ss);
 	printf("\n");
-	printf("ours: %d\nlib: %d\n",i ,j);
+	printf("ours: %d\nlib: %d\n", i, j);
 	return (0);
 }

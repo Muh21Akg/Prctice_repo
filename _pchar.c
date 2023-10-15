@@ -2,7 +2,7 @@
 
 /**
  * _pchar - prints a character argument
- * @val: argument
+ * @arg: argument
  * Return: 1
  */
 int _pchar(va_list arg)

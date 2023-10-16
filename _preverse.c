@@ -28,7 +28,7 @@ int _preverse(va_list arg)
 	if (s == NULL)
 		s = "(null)";
 	len = _strlenv(s);
-	for (i = len; i <= 0; i++)
+	for (i = (len - 1); i >= 0; i--)
 		_putchar(s[i]);
 	return (len);
 }

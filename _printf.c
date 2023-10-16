@@ -10,8 +10,8 @@ int _printf(const char *format, ...)
 	f_func fun[] = {
 		{"d", _pint},
 		{"c", _pchar},
-		{"s", _pstring},
-		{"r", _preverse}, {"o", _poctal}, {"x", _phexadecimal},
+		{"s", _pstring},{"X", _phexadecimal},
+		{"r", _preverse}, {"o", _poctal}, {"x", _phexa},
 		{"i", _pinteger}, {"u", _punsigned}, {"b", _pbinary}
 	};
 	int i, funs, len;
@@ -23,7 +23,7 @@ loop:
 	for (; format[i] && format; i++)
 		{
 		funs = 0;
-		for (; funs < 9; funs++)
+		for (; funs < 10; funs++)
 		{
 			if (format[i] == '%')
 			{

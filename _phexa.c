@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _phexadecimal - A function that prints ASCII value in uppcase hexa
+ * _phexa - A function that prints ASCII value in lwcase hexa
  * @x: value to print
  * Return: number of bytes printed
  */
-int _phexadecimal(va_list x)
+int _phexa(va_list x)
 {
 	unsigned int a[8];
 	unsigned int i, input, maxx = 268435456, sum = 0;
 	int counter = 0;
-	char calc = 'A' - ':';
+	char calc = 'a' - ':';
 	input = va_arg(x, unsigned int);
 
 	a[0] = input / maxx;

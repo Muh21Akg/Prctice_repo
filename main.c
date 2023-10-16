@@ -15,11 +15,17 @@ int main(void)
 	char *st = "abcde";
 	int x = 8848;
 	int i, j;
+	unsigned int ui;
+	ui = (unsigned int)INT_MAX + 1024;
 
 	i = _printf("%u%o%ihe%cllo%%, w%sorld%cWAS%sSUP%s\n", y, y, x, c, s, cc, st, ss);
 	printf("\n");
 	j = printf("%u%o%ihe%cllo%%, w%sorld%cWAS%sSUP%s\n", y, y, x, c, s, cc, st, ss);
 	printf("\n");
 	printf("ours: %d\nlib: %d\n", i, j);
+	_printf("%b\n", 98);
+	_printf("%x\n", 98);
+	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	return (0);
 }

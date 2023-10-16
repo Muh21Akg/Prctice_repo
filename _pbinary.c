@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
- * prin - does the actual printing
+ * prinb - does the actual printing
  * @x: int to be printedi
  */
-void prin(int x)
+void prinb(int x)
 {
 	if (x < 0)
 	{
 		_putchar('-');
 		x = -1 * x;
 	}
-	if (x / 10)
+	if (x / 2)
 	{
-		prin(x / 10);
+		prinb(x / 2);
 	}
-	_putchar(x % 10 + '0');
+	_putchar(x % 2 + '0');
 }
 /**
- * le - calculates no of printed chars
+ * leb - calculates no of printed chars
  * @x: argument
  * Return: length
  */
-int le(int x)
+int leb(int x)
 {
 	int len = 0;
 
@@ -32,26 +32,26 @@ int le(int x)
 		x = x * -1;
 	}
 loop:
-	if (x / 10)
+	if (x / 2)
 	{
 		len++;
-		x = x / 10;
+		x = x / 2;
 		goto loop;
 	}
 	len++;
 	return (len);
 }
 /**
- * _pinteger - prints an int argument
+ * _pbinary - prints an int argument
  * @arg: argument
  * Return: no of chars printed
  */
-int _pinteger(va_list arg)
+int _pbinary(va_list arg)
 {
 	int x, len = 0;
 
 	x = va_arg(arg, int);
-	len = le(x);
-	prin(x);
+	len = leb(x);
+	prinb(x);
 	return (len);
 }

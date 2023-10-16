@@ -11,8 +11,8 @@ int _printf(const char *format, ...)
 		{"d", _pint},
 		{"c", _pchar},
 		{"s", _pstring},
-		{"r", _preverse},
-		{"i", _pinteger}
+		{"r", _preverse}, {"o", _poctal}, {"x", _phexadecimal},
+		{"i", _pinteger}, {"u", _punsigned}, {"b", _pbinary}
 	};
 	int i, funs, len;
 	va_list arg;
@@ -23,7 +23,7 @@ loop:
 	for (; format[i] && format; i++)
 		{
 		funs = 0;
-		for (; funs < 5; funs++)
+		for (; funs < 9; funs++)
 		{
 			if (format[i] == '%')
 			{

@@ -13,6 +13,10 @@ int _pstring(va_list);
 int _preverse(va_list);
 int _pinteger(va_list);
 int _pint(va_list i);
+int _punsigned(va_list);
+int _pbinary(va_list);
+int _poctal(va_list);
+int _phexadecimal(va_list);
 /**
  * struct format_functions - structure of type format with two elements
  * @src: placeholder

@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	f_func fun[] = {
 		{"d", _pint},
 		{"c", _pchar},
-		{"s", _pstring},{"X", _phexadecimal},
+		{"s", _pstring}, {"X", _phexadecimal},
 		{"r", _preverse}, {"o", _poctal}, {"x", _phexa},
 		{"i", _pinteger}, {"u", _punsigned}, {"b", _pbinary}
 	};

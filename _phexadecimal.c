@@ -11,8 +11,8 @@ int _phexadecimal(va_list x)
 	unsigned int i, input, maxx = 268435456, sum = 0;
 	int counter = 0;
 	char calc = 'A' - ':';
-	input = va_arg(x, unsigned int);
 
+	input = va_arg(x, unsigned int);
 	a[0] = input / maxx;
 	for (i = 1; i < 8; i++)
 	{
